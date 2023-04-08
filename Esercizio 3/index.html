@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 3</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4">
+                <div class="display">
+                    <input type="text" name="display" id="display" readonly="readonly" class="display">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" id="7" value="7" onclick="n(this.id)">
+            </td>
+            <td>
+                <input type="submit" id="8" value="8" onclick="n(this.id)">
+            </td>
+            <td>
+                <input type="submit" id="9" value="9" onclick="n(this.id)">
+            </td>
+            <td>
+                <input type="submit" id="/" value="/" onclick="n(this.id)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" id="4" value="4" onclick="n(this.id)">
+            </td>
+            <td>
+                <input type="submit" id="5" value="5" onclick="n(this.id)">
+            </td>
+            <td>
+                <input type="submit" id="6" value="6" onclick="n(this.id)">
+            </td>
+            <td>
+                <input type="submit" id="*" value="X" onclick="n(this.id)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" id="1" value="1" onclick="n(this.id)">
+            </td>
+            <td>
+                <input type="submit" id="2" value="2" onclick="n(this.id)">
+            </td>
+            <td>
+                <input type="submit" id="3" value="3" onclick="n(this.id)">
+            </td>
+            <td>
+                <input type="submit" id="-" value="-" onclick="n(this.id)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" id="0" value="0" onclick="n(this.id)">
+            </td>
+            <td>
+                <button value="C" onclick="cancella()">C</button>
+            </td>
+            <td>
+                <button value="="onclick="operazione()">=</button>
+            </td>
+            <td>
+                <input type="submit" id="+" value="+" onclick="n(this.id)">
+            </td>
+        </tr>
+
+        <script>
+            function n(dato){ 
+                document.getElementById("display").value += dato;
+            }
+    
+            function operazione() { 
+                document.getElementById("display").value = eval(document.getElementById("display").value); 
+            }
+    
+            function cancella() { 
+                document.getElementById("display").value = ""; 
+            }
+        </script>
+
+    </table>
+</body>
+</html>

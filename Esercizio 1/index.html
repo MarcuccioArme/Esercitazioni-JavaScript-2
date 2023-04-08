@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Esercizio 1</title>
+    <script type="text/javascript">
+
+    let Vet1;
+    let Vet2 = '';
+    let Carattere;
+    let i;
+    let j=0;
+
+    Vet1 = prompt("Inserisci una frase");
+
+    document.write("Parola normale: "+Vet1);
+
+    for (i=Vet1.length-1; i>=0; i--) {
+        if (Vet1.charAt(j) == ' ') {
+            Vet2 += ' ';
+
+            i++;
+            j++;
+        }
+        else {
+            if (Vet1.charAt(i) == ' ') {
+                Vet2 += '';
+            }
+            else {
+                Carattere = Vet1.charAt(i);
+                Vet2 += Carattere;
+
+                j++;
+            }
+        }
+    }
+
+    if(Vet1 == Vet2){
+        document.write("<br>Parola inversa: "+Vet2);
+        document.write("<br><b>la parola è palindroma</b>");
+        alert("la parola è palindroma");
+    } else {
+        Vet2='';
+        for (i=Vet1.length-1; i>=0; i--) {
+            Carattere = Vet1[i];
+            Vet2 += Carattere;
+        }
+        document.write("<br>Parola inversa: "+Vet2);
+        document.write("<br>la parola non è palindroma");
+        alert("la parola <b>NON</b> è palindroma");
+    }
+        
+    </script>
+</head>
+<body>
+</body>
+</html>
